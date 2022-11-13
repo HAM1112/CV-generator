@@ -13,8 +13,8 @@ class General extends Component{
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     
-    handleSubmit(){
-        
+    handleSubmit(e){
+        e.preventDefault()
         this.setState(state =>({
             name : document.getElementById('name').value,
             age : document.getElementById('age').value,
@@ -28,7 +28,8 @@ class General extends Component{
         return (
             <div className="main-general">
                 <div className="general-input">
-            
+                    <form>
+
                         <div>
                             <label>Name</label>
                             <input 
@@ -55,6 +56,7 @@ class General extends Component{
                             />
                         </div>
                         <button type="submit" onClick={this.handleSubmit}>yeah this one</button>
+                    </form>
             
                 </div>
                 <div>

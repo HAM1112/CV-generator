@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { General } from "./general";
+import { Education } from "./education";
 
 class Contents extends Component{
 
@@ -11,6 +12,7 @@ class Contents extends Component{
                 <div>
                     <div>
                         <General />
+                        <Education />
                     </div>
                 </div>
             )
