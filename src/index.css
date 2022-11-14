@@ -27,35 +27,78 @@ h1{
   margin: 10px;
 }
 
-.main{
-  border: 4px solid red;
-  margin: 30px;
+h2{ 
+  padding: 5px;
+  margin-left: 15px;
+  border-bottom: 2px solid #C3E0E5;
 }
 
-.main-general , 
+input{
+  width: 95%;
+  height: 25px;
+  padding: 0px 10px;
+  background-color: #41729F;
+  border: 2px solid #274472;
+  border-radius: 5px;
+  color: #ffffff;
+}
+input:focus{
+  outline: none;
+  border: 2px solid #C3E0E5;
+}
+
+button{
+  background-color: #274472;
+  color: #C3E0E5;
+  font-weight: bolder;
+  padding: 10px;
+  width: 80px;
+  border: 2px solid #274472;
+}
+
+.main{
+  margin: 50px auto;
+  padding: 10px;
+  padding-bottom: 30px;
+  background-color: #41729F;
+  border: 3px solid #274472;
+  border-radius: 5px;
+  max-width: 600px;
+}
+
+/* .main-general , 
 .main-edu,
 .main-work{
-  display: flex;
-  gap: 20px;
   border: 4px solid green;
-}
-.main-general > div , 
+
+} */
+/* .main-general > div , 
 .main-edu > div,
 .main-work > div{
   width: 100%;
   flex: 2;
-}
+} */
 
-.main-general > .general-input , 
+/* .main-general > .general-input , 
 .main-edu > .edu-input,
 .main-work > .work-input{
-  
   flex: 1;
-}
+} */
 
 .main-output{
   border: 4px solid red;
-  margin: 0px 30px;
+  margin: auto;
   padding: 10px;
+  max-width: 600px;
   background-color: #274472;
 }
+
+.form-feild{
+  padding: 0px 20px;
+}
+
+.form-feild > form > div > div {
+  padding: 10px 0px;
+}
+ 
+

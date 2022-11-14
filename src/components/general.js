@@ -6,8 +6,9 @@ class General extends Component{
 
         this.state = {
             name : "superman",
-            age : 29,
-            email : "superman@kripton.com"
+            age : 28,
+            email : "superman@kripton.com",
+            title : "Super hero",
         }  
         
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -19,6 +20,7 @@ class General extends Component{
             name : document.getElementById('name').value,
             age : document.getElementById('age').value,
             email : document.getElementById('email').value,
+            title : document.getElementById('title').value,
         }))
     }
 
@@ -32,7 +34,8 @@ class General extends Component{
                 <div>
                     {this.state.name}<br/>
                     {this.state.age}<br/>
-                    {this.state.email}
+                    {this.state.email}<br />
+                    {this.state.title}
                 </div>
             )
         }
@@ -40,35 +43,59 @@ class General extends Component{
             return (
                 <div className="main-general">
                     <div className="general-input">
-                        <form>
-    
-                            <div>
-                                <label>Name</label>
-                                <input 
-                                type={'text'} 
-                                id="name"
-                                />
-                            </div>
-    
-                            <div>
-                                <label>Age</label>
-                                <input 
-                                type={'number'} 
-                                id={'age'}
-                                //value={this.state.age}
-                                />
-                            </div>
-    
-                            <div>
-                                <label>Email</label>
-                                <input 
-                                type={'email'}
-                                id={'email'} 
-                                //value={this.state.email}
-                                />
-                            </div>
-                            <button type="submit" onClick={this.handleSubmit}>yeah this one</button>
-                        </form>
+                        <h2>Personal Details</h2>
+                        <div className="form-feild">
+                            
+                            <form>
+        
+                                <div>
+                                    <label>Name</label>
+                                    <div>
+                                    <input 
+                                    type={'text'} 
+                                    id="name"
+                                    />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label>Title</label>
+                                    <div>
+                                    <input 
+                                    type={'text'} 
+                                    id="title"
+                                    />
+                                    </div>
+                                </div>
+        
+                                <div>
+                                    <label>Age</label>
+                                    <div>
+                                    <input 
+                                    type={'number'} 
+                                    id={'age'}
+                                    //value={this.state.age}
+                                    />
+                                    </div>
+                                </div>
+        
+                                <div>
+                                    <label>Email</label>
+                                    <div>
+                                    <input 
+                                    type={'email'}
+                                    id={'email'} 
+                                    //value={this.state.email}
+                                    />
+                                    </div>
+                                </div>
+                                <button 
+                                type="submit" 
+                                onClick={this.handleSubmit}>
+                                    Add 
+                                </button>
+                            </form>
+                        </div>
                 
                     </div>
                 </div>

@@ -6,7 +6,7 @@ class Education extends Component{
 
         this.state = {
             university : "Havard University",
-            degree : "Computer Engineering",
+            program : "Computer Engineering",
             stream : "Computer"
         }
         
@@ -17,7 +17,7 @@ class Education extends Component{
         e.preventDefault()
         this.setState(state =>({
             university : document.getElementById('uni').value,
-            degree : document.getElementById('degree').value,
+            program : document.getElementById('program').value,
             stream : document.getElementById('stream').value,
         }))
     }
@@ -28,7 +28,7 @@ class Education extends Component{
             return (
                 <div>
                     {this.state.university}<br/>
-                    {this.state.degree}<br/>
+                    {this.state.program}<br/>
                     {this.state.stream}
                 </div>
             )
@@ -37,27 +37,42 @@ class Education extends Component{
             return (
                 <div className="main-edu">
                     <div className="edu-input">
+                        <h2>Educatoional Qualification</h2>
+                        <div className="form-feild">
+
+                            <form>
+                                
+                                <div>
+                                    <label>University</label>
+                                    <div>
+                                    <input type={"text"} id={"uni"}/>
+                                    </div>
+                                </div>
+        
+                                <div>
+                                    <label>Program</label>
+                                    <div>
+                                    <input type={'text'} id={'program'} />
+                                    </div>
+                                </div>
+        
+                                <div>
+                                    <label>Stream</label>
+                                    <div>
+                                    <input type={'text'} id={'stream'} />
+                                    </div>
+                                </div>
+        
+                                <button 
+                                type="submit" 
+                                onClick={this.handleSubmit}
+                                >
+                                Add 
+                                </button>
+        
+                            </form>
+                        </div>
     
-                        <form>
-                            
-                            <div>
-                                <label>University</label>
-                                <input type={"text"} id={"uni"}/>
-                            </div>
-    
-                            <div>
-                                <label>Degree</label>
-                                <input type={'text'} id={'degree'} />
-                            </div>
-    
-                            <div>
-                                <label>Stream</label>
-                                <input type={'text'} id={'stream'} />
-                            </div>
-    
-                            <button type="submit" onClick={this.handleSubmit}>Add Education</button>
-    
-                        </form>
     
                     </div>
                 </div>
