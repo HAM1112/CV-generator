@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: darkslategrey;
+  background-color: #5885AF;
 }
 
 code {
@@ -26,18 +26,27 @@ h1{
   margin: 10px;
 }
 
-.main-general , .main-edu{
+.main{
+  border: 4px solid red;
+  margin: 30px 20px;
+}
+
+.main-general , 
+.main-edu,
+.main-work{
   display: flex;
   gap: 20px
 }
-.main-general > div , .main-edu > div{
-  border: 4px solid green;
+.main-general > div , 
+.main-edu > div,
+.main-work > div{
   width: 100%;
   flex: 2;
 }
 
 .main-general > .general-input , 
-.main-edu > .edu-input{
-  background-color: blue;
+.main-edu > .edu-input,
+.main-work > .work-input{
+  
   flex: 1;
 }

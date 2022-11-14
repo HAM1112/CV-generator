@@ -13,8 +13,8 @@ class Education extends Component{
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     
-    handleSubmit(){
-        
+    handleSubmit(e){
+        e.preventDefault()
         this.setState(state =>({
             university : document.getElementById('uni').value,
             degree : document.getElementById('degree').value,
