@@ -24,40 +24,45 @@ class Education extends Component{
 
     render(){
 
-
-        return (
-            <div className="main-edu">
-                <div className="edu-input">
-
-                    <form>
-                        
-                        <div>
-                            <label>University</label>
-                            <input type={"text"} id={"uni"}/>
-                        </div>
-
-                        <div>
-                            <label>Degree</label>
-                            <input type={'text'} id={'degree'} />
-                        </div>
-
-                        <div>
-                            <label>Stream</label>
-                            <input type={'text'} id={'stream'} />
-                        </div>
-
-                        <button type="submit" onClick={this.handleSubmit}>Add Education</button>
-
-                    </form>
-
-                </div>
+        if(this.props.show){
+            return (
                 <div>
                     {this.state.university}<br/>
                     {this.state.degree}<br/>
                     {this.state.stream}
                 </div>
-            </div>
-        )
+            )
+        }
+        else{
+            return (
+                <div className="main-edu">
+                    <div className="edu-input">
+    
+                        <form>
+                            
+                            <div>
+                                <label>University</label>
+                                <input type={"text"} id={"uni"}/>
+                            </div>
+    
+                            <div>
+                                <label>Degree</label>
+                                <input type={'text'} id={'degree'} />
+                            </div>
+    
+                            <div>
+                                <label>Stream</label>
+                                <input type={'text'} id={'stream'} />
+                            </div>
+    
+                            <button type="submit" onClick={this.handleSubmit}>Add Education</button>
+    
+                        </form>
+    
+                    </div>
+                </div>
+            )
+        }
     }
 }
 

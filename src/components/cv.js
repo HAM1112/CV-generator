@@ -16,6 +16,11 @@ class Contents extends Component{
                         <Education />
                         <Works />
                     </div>
+                    <div className="main-output">
+                        <General show={"output"} />
+                        <Education show={"output"} />
+                        <Works show={"output"} />
+                    </div>
                 </div>
             )
         }

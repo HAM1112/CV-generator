@@ -25,47 +25,55 @@ class General extends Component{
     render(){
         //console.log("hi");
 
-        return (
-            <div className="main-general">
-                <div className="general-input">
-                    <form>
+         
+        if(this.props.show){
+            return (
 
-                        <div>
-                            <label>Name</label>
-                            <input 
-                            type={'text'} 
-                            id="name"
-                            />
-                        </div>
-
-                        <div>
-                            <label>Age</label>
-                            <input 
-                            type={'number'} 
-                            id={'age'}
-                            //value={this.state.age}
-                            />
-                        </div>
-
-                        <div>
-                            <label>Email</label>
-                            <input 
-                            type={'email'}
-                            id={'email'} 
-                            //value={this.state.email}
-                            />
-                        </div>
-                        <button type="submit" onClick={this.handleSubmit}>yeah this one</button>
-                    </form>
-            
-                </div>
                 <div>
                     {this.state.name}<br/>
                     {this.state.age}<br/>
                     {this.state.email}
                 </div>
-            </div>
-        )   
+            )
+        }
+        else{
+            return (
+                <div className="main-general">
+                    <div className="general-input">
+                        <form>
+    
+                            <div>
+                                <label>Name</label>
+                                <input 
+                                type={'text'} 
+                                id="name"
+                                />
+                            </div>
+    
+                            <div>
+                                <label>Age</label>
+                                <input 
+                                type={'number'} 
+                                id={'age'}
+                                //value={this.state.age}
+                                />
+                            </div>
+    
+                            <div>
+                                <label>Email</label>
+                                <input 
+                                type={'email'}
+                                id={'email'} 
+                                //value={this.state.email}
+                                />
+                            </div>
+                            <button type="submit" onClick={this.handleSubmit}>yeah this one</button>
+                        </form>
+                
+                    </div>
+                </div>
+            )  
+        }
     }
 }
 
