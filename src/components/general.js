@@ -5,8 +5,8 @@ class General extends Component{
         super()
 
         this.state = {
-            name : "superman",
-            age : 28,
+            name : "Super-Man",
+            phone : 1112223334,
             email : "superman@kripton.com",
             title : "Super hero",
         }  
@@ -18,10 +18,11 @@ class General extends Component{
         e.preventDefault()
         this.setState(state =>({
             name : document.getElementById('name').value,
-            age : document.getElementById('age').value,
+            phone : document.getElementById('phone').value,
             email : document.getElementById('email').value,
             title : document.getElementById('title').value,
         }))
+        console.log(("hi"));
     }
 
     render(){
@@ -31,11 +32,21 @@ class General extends Component{
         if(this.props.show){
             return (
 
-                <div>
-                    {this.state.name}<br/>
-                    {this.state.age}<br/>
-                    {this.state.email}<br />
-                    {this.state.title}
+                <div className="general-output">
+                    <div>
+                        <h1>
+                            {this.state.name}
+                        </h1>
+                        <span>
+                            {this.state.title}
+                        </span>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>{this.state.phone}</p>
+                        <h4>Email</h4>
+                        <p>{this.state.email}</p>
+                    </div>
                 </div>
             )
         }
@@ -56,6 +67,7 @@ class General extends Component{
                                     id="name"
                                     />
                                     </div>
+                                    {this.state.name}
                                 </div>
 
                                 <div>
@@ -73,7 +85,7 @@ class General extends Component{
                                     <div>
                                     <input 
                                     type={'number'} 
-                                    id={'age'}
+                                    id={'phone'}
                                     //value={this.state.age}
                                     />
                                     </div>

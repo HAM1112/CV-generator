@@ -28,7 +28,8 @@ class Works extends Component{
         if(this.props.show){
             return (
                 <div>
-                    {this.state.company}<br/>
+                    <h4>{this.state.company}<br/></h4>
+                    
                     {this.state.position}<br/>
                     {this.state.years}
                 </div>

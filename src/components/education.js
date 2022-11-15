@@ -7,7 +7,8 @@ class Education extends Component{
         this.state = {
             university : "Havard University",
             program : "Computer Engineering",
-            stream : "Computer"
+            startyear : 2001,
+            endyear : 2006,
         }
         
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -18,7 +19,8 @@ class Education extends Component{
         this.setState(state =>({
             university : document.getElementById('uni').value,
             program : document.getElementById('program').value,
-            stream : document.getElementById('stream').value,
+            startyear : document.getElementById('startyear').value,
+            endyear : document.getElementById('endyear').value,
         }))
     }
 
@@ -27,9 +29,11 @@ class Education extends Component{
         if(this.props.show){
             return (
                 <div>
-                    {this.state.university}<br/>
-                    {this.state.program}<br/>
-                    {this.state.stream}
+                    <h4>Education</h4>
+                    <p>
+                        {this.state.program} from {this.state.university}   
+                        {this.state.startyear} {this.state.endyear}
+                    </p>
                 </div>
             )
         }
@@ -57,9 +61,16 @@ class Education extends Component{
                                 </div>
         
                                 <div>
-                                    <label>Stream</label>
+                                    <label>Start</label>
                                     <div>
-                                    <input type={'text'} id={'stream'} />
+                                    <input type={'text'} id={'startyear'} />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label>End</label>
+                                    <div>
+                                    <input type={'text'} id={'endyear'} />
                                     </div>
                                 </div>
         
