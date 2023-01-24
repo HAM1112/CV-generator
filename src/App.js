@@ -8,11 +8,13 @@ function App() {
   
   
   return (
-    <div className='cv-field'>
+    <div className='cv-input-field'>
       <div className='get-details'>
         <Personal passdata={setPersonalDetails}/>
       </div>
-
+      <div className="display-cv">
+        {PersonalDetails.name}
+      </div>
       
     </div>
   )
