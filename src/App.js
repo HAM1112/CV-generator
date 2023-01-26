@@ -18,7 +18,8 @@ function App() {
         <Education passdata={setEducationalDetails}/>
         <Work passdata={setWorkDetails}/>
       </div>
-      <div className="display-cv">
+      {PersonalDetails ? 
+        <div className="display-cv">
         {
           //display personal details
         <div className='heading'>
@@ -27,7 +28,6 @@ function App() {
             <h1>{PersonalDetails.name}</h1>
             <h3>{PersonalDetails.title}</h3>
           </div>
-
 
           <div className='heading-sidebar'>
             <div>
@@ -54,28 +54,20 @@ function App() {
           })}
           </div>:null}
           
-        
-
-        {
-          // Education details
+          {/* Education details */}
           
-          <div>
           {EducationalDetails ? <div>
             <h2>Educational Qualifications</h2>
             {EducationalDetails.map((education)=>{
               return ( <p> Completed {education.program} from {education.university} within {education.start} - {education.end} Acadamic Year.</p> )
             })}
           </div>:null }
-            
-          </div>
-        }
-
 
       </div>
-      
-      
+       :null}
     </div>
   )
 }
 
 export default App
+
